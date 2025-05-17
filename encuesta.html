@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Encuesta Eurovisión 2025</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <img src="https://eurovision.tv/mediacentre/logos-and-artwork" alt="Logo Eurovisión 2025">
+  </header>
+  <main>
+    <h2>Bienvenida, <span id="userDisplay"></span></h2>
+    <form id="surveyForm">
+      <label for="winner">¿Qué país crees que va a ganar Eurovisión?</label>
+      <input type="text" id="winner" required>
+
+      <label for="melodyPosition">¿En qué puesto crees que va a quedar Melody con su canción "Esa Diva"?</label>
+      <input type="number" id="melodyPosition" min="1" max="40" required>
+
+      <button type="submit">Guardar</button>
+      <button type="button" id="restart">Reiniciar</button>
+    </form>
+
+    <section id="results">
+      <h3>Participantes</h3>
+      <table>
+        <thead>
+          <tr>
+            <th>Nombre</th>
+            <th>Ganador</th>
+            <th>Puesto de Melody</th>
+          </tr>
+        </thead>
+        <tbody id="resultsBody">
+          <!-- Datos cargados dinámicamente -->
+        </tbody>
+      </table>
+    </section>
+  </main>
+  <footer>
+    <p>&copy; 2025 Javier Ruiz</p>
+  </footer>
+  <script src="script.js"></script>
+</body>
+</html>
